@@ -1,7 +1,25 @@
-<nav class="bg-app-red border-gray-200 px-2 sm:px-4 py-2.5">
-  <div class="container flex flex-wrap justify-between items-center mx-auto">
-      <p class="text-white font-bold text-xl hover:cursor-pointer" [routerLink]="['/']">Ajialy</p>
-      <p class="text-white font-bold text-base hover:cursor-pointer" [routerLink]="['/']">HOME</p>
-      <p class="text-white font-bold text-base hover:cursor-pointer" [routerLink]="['/artist']">ARTISTS</p>
+<nav class="bg-app-red border-gray-200 px-2 sm:px-4 py-2.5 flex">
+  <p
+    class="text-white font-bold text-2xl hover:cursor-pointer"
+    [routerLink]="['/']"
+  >
+    Ajialy
+  </p>
+  <div
+    class="container flex flex-wrap justify-between items-center mr-auto ml-96"
+  >
+    <p
+      class="text-white font-bold text-base hover:cursor-pointer"
+      [routerLink]="['/']"
+    >
+      HOME
+    </p>
+    <p
+      class="text-white font-bold text-base hover:cursor-pointer"
+      [routerLink]="['/artist']"
+    >
+      ARTISTS
+    </p>
+    <p class="text-white font-bold text-base hover:cursor-pointer">LANGUAGE</p>
   </div>
 </nav>
