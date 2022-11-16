@@ -39,29 +39,35 @@
   <h2 class="text-4xl text-app-red font-bold">Trending</h2>
 
   <div
-    class="flex p-4 mt-2 hover:cursor-pointer hover:bg-slate-100 duration-300"
+    class="flex p-4 mt-2 hover:cursor-pointer hover:bg-slate-200 duration-300"
   >
     <p class="text-lg text-gray-400">1</p>
     <p class="ml-5 text-xl text-app-red">Bad example</p>
   </div>
 
-  <div class="flex p-4 hover:cursor-pointer hover:bg-slate-100 duration-300">
+  <div class="flex p-4 hover:cursor-pointer hover:bg-slate-200 duration-300">
     <p class="text-lg text-gray-400">2</p>
     <p class="ml-5 text-xl text-app-red">Cheating is a crime</p>
   </div>
 
-  <div class="flex p-4 hover:cursor-pointer hover:bg-slate-100 duration-300">
+  <div class="flex p-4 hover:cursor-pointer hover:bg-slate-200 duration-300">
     <p class="text-lg text-gray-400">3</p>
     <p class="ml-5 text-xl text-app-red">It's ok to envy</p>
   </div>
 
-  <div class="flex p-4 hover:cursor-pointer hover:bg-slate-100 duration-300">
+  <div class="flex p-4 hover:cursor-pointer hover:bg-slate-200 duration-300">
     <p class="text-lg text-gray-400">4</p>
     <p class="ml-5 text-xl text-app-red">Toy</p>
   </div>
 
-  <div class="flex p-4 hover:cursor-pointer hover:bg-slate-100 duration-300">
+  <div class="flex p-4 hover:cursor-pointer hover:bg-slate-200 duration-300">
     <p class="text-lg text-gray-400">5</p>
     <p class="ml-5 text-xl text-app-red">Just disappear</p>
   </div>
+</section>
+
+<section class="mt-16">
+  <h2 class="text-4xl text-app-red font-bold">About the artist</h2>
+
+  <div [innerText]="about" class="text-lg"></div>
 </section>

@@ -1,13 +1,13 @@
-<nav class="bg-app-red border-gray-200 px-2 sm:px-4 py-2.5 flex">
+<nav
+  class="bg-app-red border-gray-200 sm:px-4 py-2.5 flex container mx-auto px-40"
+>
   <p
     class="text-white font-bold text-2xl hover:cursor-pointer"
     [routerLink]="['/']"
   >
     Ajialy
   </p>
-  <div
-    class="container flex flex-wrap justify-between items-center mr-auto ml-96"
-  >
+  <div class="flex items-center w-full justify-end">
     <p
       class="text-white font-bold text-base hover:cursor-pointer"
       [routerLink]="['/']"
@@ -15,11 +15,16 @@
       HOME
     </p>
     <p
-      class="text-white font-bold text-base hover:cursor-pointer"
+      class="text-white font-bold text-base hover:cursor-pointer ml-5"
       [routerLink]="['/artist']"
     >
       ARTISTS
     </p>
-    <p class="text-white font-bold text-base hover:cursor-pointer">LANGUAGE</p>
+    <p class="text-white font-bold text-base hover:cursor-pointer ml-5">
+      LANGUAGE
+    </p>
+    <p class="text-white font-bold text-base hover:cursor-pointer ml-5">
+      ABOUT
+    </p>
   </div>
 </nav>
