@@ -1,5 +1,5 @@
-import { Artist } from "./artist";
-import { PropsExcept } from "./utils";
+import { Artist } from './artist';
+import { PropsExcept } from './utils';
 
 export enum OriginalLyrics {
   JAPANESE = 'JAPANESE',
@@ -15,4 +15,7 @@ export type Song = {
   englishLyrics: string;
   portugueseLyrics: string;
   originalLyrics: OriginalLyrics;
+  accessCount: number;
+  createdOn: string;
+  updatedOn: string;
 };

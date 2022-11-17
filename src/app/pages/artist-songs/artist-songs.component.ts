@@ -23,12 +23,13 @@ export class ArtistSongsComponent implements OnInit {
   `;
 
   songs = [
-    { name: 'Bad example' },
-    { name: 'Cheating is a crime' },
-    { name: "It's ok to envy" },
-    { name: 'Toy' },
-    { name: 'Just disappear' },
+    { name: 'Bad example', accessCount: 5000, createdOn: '2022-01-01' },
+    { name: 'Cheating is a crime', accessCount: 4000, createdOn: '2022-01-10' },
+    { name: "It's ok to envy", accessCount: 3000, createdOn: '2021-01-01' },
+    { name: 'Toy', accessCount: 2000, createdOn: '2020-01-01' },
+    { name: 'Just disappear', accessCount: 1000, createdOn: '2019-01-01' },
   ] as Song[];
+  songOrder = 'trending';
 
   constructor() {}
 
@@ -46,5 +47,22 @@ export class ArtistSongsComponent implements OnInit {
       twitterUrl: this.twitterUrl,
       spotifyUrl: this.spotifyUrl,
     };
+  }
+
+  orderSongs(): void {
+    switch (this.songOrder) {
+      case 'trending':
+        this.songs = this.songs.sort((a, b) => b.accessCount - a.accessCount);
+        break;
+      case 'name':
+        this.songs = this.songs.sort((a, b) => (a.name > b.name ? 1 : -1));
+        break;
+      case 'addedDate':
+        this.songs = this.songs.sort(
+          (a, b) =>
+            new Date(a.createdOn).getDate() - new Date(b.createdOn).getDate()
+        );
+        break;
+    }
   }
 }

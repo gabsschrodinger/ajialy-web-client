@@ -1,14 +1,36 @@
 <app-artist-header [artist]="getArtist()"></app-artist-header>
 
-<p
-  class="text-app-red hover:cursor-pointer hover:underline text-lg mt-16"
-  [routerLink]="['/artist']"
->
-  < Back to artist page
-</p>
+<div class="flex">
+  <p
+    class="text-app-red hover:cursor-pointer hover:underline text-lg mt-16"
+    [routerLink]="['/artist']"
+  >
+    < Back to artist page
+  </p>
+</div>
 
 <section>
-  <h2 class="text-4xl text-app-red font-bold mt-6">List of songs</h2>
+  <div class="flex items-end">
+    <h2 class="text-4xl text-app-red font-bold mt-6">List of songs</h2>
+
+    <div
+      class="ml-5 flex bg-app-red hover:cursor-pointer text-white font-bold py-2 px-4 rounded"
+    >
+      <label for="" class="hover:cursor-pointer">Sort by</label>
+      <select
+        [(ngModel)]="songOrder"
+        (change)="orderSongs()"
+        name=""
+        id=""
+        class="bg-transparent hover:cursor-pointer outline-none focus:outline-none"
+      >
+        <option value="trending" class="text-black">Trending</option>
+        <option value="name" class="text-black">Name</option>
+        <option value="addedDate" class="text-black">Recently added</option>
+      </select>
+    </div>
+  </div>
+
   <app-song-item
     *ngFor="let song of songs; index as songIndex"
     [song]="song"

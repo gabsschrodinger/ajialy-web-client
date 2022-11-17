@@ -11,6 +11,7 @@ import { SocialMediaComponent } from './components/artist/social-media/social-me
 import { ArtistHeaderComponent } from './components/artist/artist-header/artist-header.component';
 import { ArtistSongsComponent } from './pages/artist-songs/artist-songs.component';
 import { SongItemComponent } from './components/song/song-item/song-item.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { SongItemComponent } from './components/song/song-item/song-item.compone
     ArtistSongsComponent,
     SongItemComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
+  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
