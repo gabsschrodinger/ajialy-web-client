@@ -8,9 +8,18 @@ import { ArtistComponent } from './pages/artist/artist.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FooterComponent } from './components/footer/footer.component';
 import { SocialMediaComponent } from './components/artist/social-media/social-media.component';
+import { ArtistHeaderComponent } from './components/artist/artist-header/artist-header.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, HomeComponent, ArtistComponent, FooterComponent, SocialMediaComponent],
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    HomeComponent,
+    ArtistComponent,
+    FooterComponent,
+    SocialMediaComponent,
+    ArtistHeaderComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
   providers: [],
   bootstrap: [AppComponent],

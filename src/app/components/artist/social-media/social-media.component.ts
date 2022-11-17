@@ -6,6 +6,7 @@ import {
   faYoutube,
   IconDefinition,
 } from '@fortawesome/free-brands-svg-icons';
+import { SocialMedia } from 'src/app/types/socialMedia';
 import { Artist, ArtistMediaKey } from '../../../types/artist';
 
 @Component({
@@ -19,7 +20,7 @@ export class SocialMediaComponent implements OnInit {
   instagramIcon = faInstagram;
 
   @Input() artist!: Artist;
-  @Input() media!: 'spotify' | 'youtube' | 'twitter' | 'instagram';
+  @Input() media!: SocialMedia;
 
   constructor() {}
 

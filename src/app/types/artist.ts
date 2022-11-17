@@ -10,6 +10,7 @@ export type ArtistMediaKey =
 export type Artist = {
   id: number;
   name: string;
+  country: string;
   image: string;
   songs: PropsExcept<Song, 'artists'>[];
   spotifyUrl: string;

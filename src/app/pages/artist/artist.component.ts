@@ -44,6 +44,7 @@ export class ArtistComponent implements OnInit {
     return {
       id: 1,
       name: this.name,
+      country: this.country,
       image: this.image,
       songs: [],
       instagramUrl: this.instagramUrl,

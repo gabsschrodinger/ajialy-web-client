@@ -1,32 +1,4 @@
-<div class="flex">
-  <div
-    class="w-40 h-40 rounded bg-cover bg-repeat-space bg-center"
-    [ngStyle]="{ 'background-image': getImageUrl() }"
-  ></div>
-  <div class="flex flex-col items-start ml-5">
-    <h2 class="text-5xl text-app-red font-bold mb-1.5">{{ name }}</h2>
-    <h3 class="text-2xl text-app-red font-semibold">{{ country }}</h3>
-
-    <div class="flex mt-auto">
-      <app-social-media
-        [artist]="getArtist()"
-        [media]="'spotify'"
-      ></app-social-media>
-      <app-social-media
-        [artist]="getArtist()"
-        [media]="'youtube'"
-      ></app-social-media>
-      <app-social-media
-        [artist]="getArtist()"
-        [media]="'twitter'"
-      ></app-social-media>
-      <app-social-media
-        [artist]="getArtist()"
-        [media]="'instagram'"
-      ></app-social-media>
-    </div>
-  </div>
-</div>
+<app-artist-header [artist]="getArtist()"></app-artist-header>
 
 <section class="mt-16">
   <div class="flex items-end">
