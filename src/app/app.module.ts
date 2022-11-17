@@ -7,9 +7,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { ArtistComponent } from './pages/artist/artist.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FooterComponent } from './components/footer/footer.component';
+import { SocialMediaComponent } from './components/artist/social-media/social-media.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, HomeComponent, ArtistComponent, FooterComponent],
+  declarations: [AppComponent, NavbarComponent, HomeComponent, ArtistComponent, FooterComponent, SocialMediaComponent],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
   providers: [],
   bootstrap: [AppComponent],

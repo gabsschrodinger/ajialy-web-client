@@ -8,29 +8,22 @@
     <h3 class="text-2xl text-app-red font-semibold">{{ country }}</h3>
 
     <div class="flex mt-auto">
-      <a href="{{ spotifyUrl }}" target="_blank">
-        <fa-icon
-          [icon]="spotifyIcon"
-          [size]="'2xl'"
-          class="text-app-red"
-        ></fa-icon>
-      </a>
-
-      <a href="{{ youtubeUrl }}" target="_blank">
-        <fa-icon
-          [icon]="youtubeIcon"
-          [size]="'2xl'"
-          class="ml-4 text-app-red"
-        ></fa-icon>
-      </a>
-
-      <a href="{{ twitterUrl }}" target="_blank">
-        <fa-icon
-          [icon]="twitterIcon"
-          [size]="'2xl'"
-          class="ml-4 text-app-red"
-        ></fa-icon>
-      </a>
+      <app-social-media
+        [artist]="getArtist()"
+        [media]="'spotify'"
+      ></app-social-media>
+      <app-social-media
+        [artist]="getArtist()"
+        [media]="'youtube'"
+      ></app-social-media>
+      <app-social-media
+        [artist]="getArtist()"
+        [media]="'twitter'"
+      ></app-social-media>
+      <app-social-media
+        [artist]="getArtist()"
+        [media]="'instagram'"
+      ></app-social-media>
     </div>
   </div>
 </div>
@@ -38,7 +31,9 @@
 <section class="mt-16">
   <div class="flex items-end">
     <h2 class="text-4xl text-app-red font-bold">Trending songs</h2>
-    <p class="text-app-red ml-4 hover:cursor-pointer hover:underline text-lg">See all</p>
+    <p class="text-app-red ml-4 hover:cursor-pointer hover:underline text-lg">
+      See all
+    </p>
   </div>
 
   <div
