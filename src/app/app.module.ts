@@ -9,6 +9,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FooterComponent } from './components/footer/footer.component';
 import { SocialMediaComponent } from './components/artist/social-media/social-media.component';
 import { ArtistHeaderComponent } from './components/artist/artist-header/artist-header.component';
+import { ArtistSongsComponent } from './pages/artist-songs/artist-songs.component';
+import { SongItemComponent } from './components/song/song-item/song-item.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { ArtistHeaderComponent } from './components/artist/artist-header/artist-
     FooterComponent,
     SocialMediaComponent,
     ArtistHeaderComponent,
+    ArtistSongsComponent,
+    SongItemComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
   providers: [],

@@ -1,18 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  faSpotify,
-  faYoutube,
-  faTwitter,
-  faInstagram,
-} from '@fortawesome/free-brands-svg-icons';
 import { Artist } from 'src/app/types/artist';
 import { Song } from 'src/app/types/song';
 
 @Component({
-  selector: 'app-artist',
-  templateUrl: './artist.component.html',
+  selector: 'app-artist-songs',
+  templateUrl: './artist-songs.component.html',
 })
-export class ArtistComponent implements OnInit {
+export class ArtistSongsComponent implements OnInit {
   name = 'takayan';
   image =
     'https://akamai.sscdn.co/letras/338x298/fotos/f/5/0/4/f50463517748ddaebd314419cf365203.jpg';
@@ -27,6 +21,7 @@ export class ArtistComponent implements OnInit {
 
   Takayan has a YouTube channel...
   `;
+
   songs = [
     { name: 'Bad example' },
     { name: 'Cheating is a crime' },
@@ -38,10 +33,6 @@ export class ArtistComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-
-  getImageUrl(): string {
-    return `url(${this.image})`;
-  }
 
   getArtist(): Artist {
     return {

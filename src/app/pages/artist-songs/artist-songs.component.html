@@ -1,0 +1,17 @@
+<app-artist-header [artist]="getArtist()"></app-artist-header>
+
+<p
+  class="text-app-red hover:cursor-pointer hover:underline text-lg mt-16"
+  [routerLink]="['/artist']"
+>
+  < Back to artist page
+</p>
+
+<section>
+  <h2 class="text-4xl text-app-red font-bold mt-6">List of songs</h2>
+  <app-song-item
+    *ngFor="let song of songs; index as songIndex"
+    [song]="song"
+    [index]="songIndex + 1"
+  ></app-song-item>
+</section>
