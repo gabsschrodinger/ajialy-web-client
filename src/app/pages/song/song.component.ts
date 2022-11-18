@@ -23,6 +23,17 @@ export class SongComponent implements OnInit {
       twitterUrl: 'https://twitter.com/takayan_gorizal',
       instagramUrl: 'https://www.instagram.com/takayan_gorizal/',
     },
+    {
+      id: 1,
+      name: 'takayan',
+      country: 'JAPAN',
+      image:
+        'https://akamai.sscdn.co/letras/338x298/fotos/f/5/0/4/f50463517748ddaebd314419cf365203.jpg',
+      spotifyUrl: 'https://open.spotify.com/artist/79JgYJHiBUZcvYqOC5Zufn',
+      youtubeUrl: 'https://www.youtube.com/channel/UCHGGjDM6Z7nq5qBIPzn1D7Q',
+      twitterUrl: 'https://twitter.com/takayan_gorizal',
+      instagramUrl: 'https://www.instagram.com/takayan_gorizal/',
+    },
   ];
   japaneseLyrics: string = `
   some japanese lyrics
@@ -67,8 +78,23 @@ export class SongComponent implements OnInit {
     this.updateSelectedLyrics(this.originalLyrics);
   }
 
-  getArtists(): string {
-    return this.artists.map(({ name }) => name).join(',');
+  getArtists(): string[] {
+    return this.artists.map(({ name }) => name);
+  }
+
+  getPossibleLyrics(): ('PORTUGUESE' | 'ENGLISH' | 'JAPANESE')[] {
+    return ['PORTUGUESE', 'ENGLISH', 'JAPANESE'];
+  }
+
+  isSelectedLyrics(lyrics: 'PORTUGUESE' | 'ENGLISH' | 'JAPANESE'): boolean {
+    switch (lyrics) {
+      case 'ENGLISH':
+        return this.selectedLyrics === this.englishLyrics;
+      case 'JAPANESE':
+        return this.selectedLyrics === this.japaneseLyrics;
+      case 'PORTUGUESE':
+        return this.selectedLyrics === this.portugueseLyrics;
+    }
   }
 
   updateSelectedLyrics(lyrics: 'PORTUGUESE' | 'ENGLISH' | 'JAPANESE'): void {

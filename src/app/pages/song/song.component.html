@@ -1,11 +1,30 @@
 <h2 class="text-4xl text-app-red font-bold text-center">{{ name }}</h2>
-<h2
-  class="text-xl text-app-red text-center hover:cursor-pointer hover:underline"
-  [routerLink]="['/artist']"
->
-  {{ getArtists() }}
-</h2>
 
-<div></div>
+<div class="flex w-full items-center justify-center">
+  <div
+    class="flex"
+    *ngFor="let artistName of getArtists(); index as artistIndex"
+  >
+    <pre class="text-xl text-app-red" *ngIf="artistIndex !== 0">, </pre>
+    <h2
+      class="text-xl text-app-red hover:cursor-pointer hover:underline"
+      [routerLink]="['/artist']"
+    >
+      {{ artistName }}
+    </h2>
+  </div>
+</div>
+
+<div class="flex items-center justify-center mt-5">
+  <div
+    *ngFor="let possibleLyrics of getPossibleLyrics()"
+    class="ml-5 flex hover:cursor-pointer text-white font-bold py-2 px-4 rounded"
+    [class.bg-app-red]="isSelectedLyrics(possibleLyrics)"
+    [class.bg-slate-400]="!isSelectedLyrics(possibleLyrics)"
+    (click)="updateSelectedLyrics(possibleLyrics)"
+  >
+    {{ possibleLyrics }}
+  </div>
+</div>
 
 <div [innerText]="selectedLyrics" class="text-center text-xl"></div>
