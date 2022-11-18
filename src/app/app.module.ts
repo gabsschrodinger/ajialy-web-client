@@ -12,6 +12,7 @@ import { ArtistHeaderComponent } from './components/artist/artist-header/artist-
 import { ArtistSongsComponent } from './pages/artist-songs/artist-songs.component';
 import { SongItemComponent } from './components/song/song-item/song-item.component';
 import { FormsModule } from '@angular/forms';
+import { SongComponent } from './pages/song/song.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { FormsModule } from '@angular/forms';
     ArtistHeaderComponent,
     ArtistSongsComponent,
     SongItemComponent,
+    SongComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule],
   providers: [],

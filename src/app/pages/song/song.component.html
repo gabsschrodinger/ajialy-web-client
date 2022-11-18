@@ -1,0 +1,11 @@
+<h2 class="text-4xl text-app-red font-bold text-center">{{ name }}</h2>
+<h2
+  class="text-xl text-app-red text-center hover:cursor-pointer hover:underline"
+  [routerLink]="['/artist']"
+>
+  {{ getArtists() }}
+</h2>
+
+<div></div>
+
+<div [innerText]="selectedLyrics" class="text-center text-xl"></div>
